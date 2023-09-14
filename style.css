@@ -40,11 +40,11 @@ canvas {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Soft shadow for depth */
 }
 
-#clearCanvas, #download, #print {
+#clearCanvas, #download, #print , #shareOnTwitter{
     margin: 5px;
 
 }
-#toggleInfo, #clearCanvas, #download, #print, #colorPicker {
+#toggleInfo, #clearCanvas, #download, #print, #colorPicker, #shareOnTwitter {
     border: none;
     background-color: #7f7f7f;
     color: #ffffff;
@@ -55,7 +55,7 @@ canvas {
     font-family: 'Arial', sans-serif; /* A common sans-serif font */
 }
 
-#toggleInfo:hover, #clearCanvas:hover, #download:hover, #print:hover {
+#toggleInfo:hover, #clearCanvas:hover, #download:hover, #print:hover , #shareOnTwitter:hover{
     background-color: #5f5f5f;
 }
 

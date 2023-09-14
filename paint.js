@@ -67,6 +67,13 @@ function draw(event) {
     lastLineWidth = ctx.lineWidth;
 }
 
+function midPointBtw(p1, p2) {
+    return {
+        x: p1.x + (p2.x - p1.x) / 2,
+        y: p1.y + (p2.y - p1.y) / 2
+    };
+}
+
 
 /**
  * Calculate the line width based on the movement speed of the cursor.
@@ -164,7 +171,7 @@ document.getElementById('print').addEventListener('click', () => {
     windowContent += '<html lang="en">';
     windowContent += '<head><title>Print canvas</title></head>';
     windowContent += '<body>';
-    windowContent += '<img src="' + dataURL + '">';
+    windowContent += '<img alt="Pollock Style"" src="' + dataURL + '">';
     windowContent += '</body>';
     windowContent += '</html>';
     const printWin = window.open('', '', 'width=340,height=260');
@@ -184,3 +191,18 @@ document.getElementById('toggleInfo').addEventListener('click', () => {
         infoDiv.style.display = 'none';
     }
 });
+
+//Share on Twitter
+document.getElementById('shareOnTwitter').addEventListener('click', shareOnTwitter);
+
+function shareOnTwitter() {
+    const base = "https://twitter.com/intent/tweet";
+    const text = encodeURIComponent("Check out my creation on JacksonPollock by rxxuzi!");
+    const url = encodeURIComponent("https://rxxuzi.github.io/JacksonPollock/");
+    const via = "rxxuzi";
+    const hashtags = encodeURIComponent("JacksonPollock");
+
+    const tweetURL = `${base}?text=${text}&url=${url}&via=${via}&hashtags=${hashtags}`;
+
+    window.open(tweetURL, '_blank');
+}
