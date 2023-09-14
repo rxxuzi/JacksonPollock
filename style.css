@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    position: relative;
+    background-color: #efefef; /* Light background for contrast */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;  /* Removing border */
+    cursor: crosshair; /* カーソルを十字にする */
+}
+
+#toggleInfo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleInfo:hover {
+    background-color: #ddd;
+}
+
+#info {
+    display: none;  /* Initially hidden */
+    position: absolute;
+    top: 20px;
+    left: 80px;  /* Adjust as needed */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);  /* Slight transparency to give a feel */
+    border: 1px solid #000;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Soft shadow for depth */
+}
+
+#clearCanvas, #download, #print {
+    margin: 5px;
+
+}
+#toggleInfo, #clearCanvas, #download, #print, #colorPicker {
+    border: none;
+    background-color: #7f7f7f;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Arial', sans-serif; /* A common sans-serif font */
+}
+
+#toggleInfo:hover, #clearCanvas:hover, #download:hover, #print:hover {
+    background-color: #5f5f5f;
+}
+
+#colorPicker {
+    padding: 0;
+    width: 40px;  /* Adjusting size to fit more naturally */
+}
+
